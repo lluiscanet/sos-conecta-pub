@@ -1,0 +1,41 @@
+runtime: nodejs22
+
+env_variables:
+  MONGODB_URI: "mongodb+srv://lluiscanet86:Fm9pApoq1mxX7F8I@sosconectadb.h6edoji.mongodb.net/?retryWrites=true&w=majority&appName=SOSconectaDB"
+  JWT_SECRET: "sosconecta_jwt_9x8k2p5m3v7q1w4n6y0z8t2r5h9j3f6d"
+  VITE_MAPBOX_TOKEN: "pk.eyJ1IjoibGx1aXNjYyIsImEiOiJjbTMwYnFzZHowa2p3MmpxMWpqaWduNXQ4In0.raGGc3rvhEchpJx_T4NPCQ"
+
+handlers:
+# Handle static assets
+- url: /assets/(.*)
+  static_files: dist/assets/\1
+  upload: dist/assets/(.*)
+  secure: always
+
+# All other routes go to index.html
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+  secure: always
+
+- url: /housing
+  static_files: dist/index.html
+  upload: dist/index.html
+  secure: always
+
+- url: /volunteers
+  static_files: dist/index.html
+  upload: dist/index.html
+  secure: always 
+
+- url: /assistance
+  static_files: dist/index.html
+  upload: dist/index.html
+  secure: always
+
+- url: /carpools
+  static_files: dist/index.html
+  upload: dist/index.html
+  secure: always
+
+

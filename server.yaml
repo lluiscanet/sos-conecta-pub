@@ -1,0 +1,14 @@
+runtime: nodejs22
+
+service: backend
+
+env_variables:
+  MONGODB_URI: "YOUR_MONGO_CONNECTION_KEY"
+  JWT_SECRET: "YOUR_SECRET"
+  VITE_MAPBOX_TOKEN: "YOUR_TOKEN"
+
+handlers:
+
+- url: /api/.*
+  script: auto
+  secure: always 
